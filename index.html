@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Tools Portal - Laraib Tanveer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+        }
+
+        header {
+            background: #0a192f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .profile h2 {
+            margin-bottom: 5px;
+            color: #0a192f;
+        }
+
+        /* SEARCH BAR */
+        .search-box {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .search-box input {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* FILTER BUTTONS */
+        .filters {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filters button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #0a192f;
+            color: white;
+            cursor: pointer;
+        }
+
+        .filters button:hover {
+            background: #112d4e;
+        }
+
+        .tools-container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .tool {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tool a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0a192f;
+        }
+
+        .tool p {
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #0a192f;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>AI Tools Portal</h1>
+</header>
+
+<div class="profile">
+    <h2>Laraib Tanveer</h2>
+    <p><strong>Degree:</strong> AI (Artificial Intelligence)</p>
+    <p><strong>Semester:</strong> 4th</p>
+    <p><strong>University:</strong> Superior University, Rahim Yar Khan</p>
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search AI Tools..." onkeyup="searchTools()">
+</div>
+
+<!-- FILTER BUTTONS -->
+<div class="filters">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('text')">Text</button>
+    <button onclick="filterCategory('image')">Image</button>
+    <button onclick="filterCategory('coding')">Coding</button>
+    <button onclick="filterCategory('productivity')">Productivity</button>
+</div>
+
+<div class="tools-container">
+
+    <!-- TEXT TOOLS -->
+    <div class="tool text">
+        <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
+        <p>AI chatbot for writing, coding and problem solving.</p>
+    </div>
+
+    <div class="tool text">
+        <a href="https://www.grammarly.com" target="_blank">Grammarly</a>
+        <p>Improves grammar and writing clarity.</p>
+    </div>
+
+    <!-- IMAGE TOOLS -->
+    <div class="tool image">
+        <a href="https://openai.com/dall-e" target="_blank">DALL·E</a>
+        <p>Generate images using text prompts.</p>
+    </div>
+
+    <div class="tool image">
+        <a href="https://www.midjourney.com" target="_blank">Midjourney</a>
+        <p>High-quality AI art generator.</p>
+    </div>
+
+    <!-- CODING TOOLS -->
+    <div class="tool coding">
+        <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>
+        <p>AI-powered coding assistant.</p>
+    </div>
+
+    <div class="tool coding">
+        <a href="https://codeium.com" target="_blank">Codeium</a>
+        <p>Free AI code completion tool.</p>
+    </div>
+
+    <!-- PRODUCTIVITY TOOLS -->
+    <div class="tool productivity">
+        <a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a>
+        <p>AI assistant for note-taking.</p>
+    </div>
+
+    <div class="tool productivity">
+        <a href="https://otter.ai" target="_blank">Otter AI</a>
+        <p>Speech-to-text meeting assistant.</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Laraib Tanveer | AI Tools Portal
+</footer>
+
+<script>
+function searchTools() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let tools = document.getElementsByClassName("tool");
+
+    for (let i = 0; i < tools.length; i++) {
+        let text = tools[i].innerText.toLowerCase();
+        if (text.includes(input)) {
+            tools[i].style.display = "block";
+        } else {
+            tools[i].style.display = "none";
+        }
+    }
+}
+
+function filterCategory(category) {
+    let tools = document.getElementsByClassName("tool");
+
+    for (let i = 0; i < tools.length; i++) {
+        if (category === "all") {
+            tools[i].style.display = "block";
+        } else if (tools[i].classList.contains(category)) {
+            tools[i].style.display = "block";
+        } else {
+            tools[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
