@@ -3,96 +3,22 @@
 <head>
     <title>AI Tools Portal - Laraib Tanveer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f4f6f9;
-        }
-
-        header {
-            background: #0a192f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .profile {
-            text-align: center;
-            margin: 20px;
-        }
-
-        .profile h2 {
-            margin-bottom: 5px;
-            color: #0a192f;
-        }
-
-        /* SEARCH BAR */
-        .search-box {
-            text-align: center;
-            margin: 20px;
-        }
-
-        .search-box input {
-            width: 60%;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        /* FILTER BUTTONS */
-        .filters {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .filters button {
-            padding: 8px 15px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            background: #0a192f;
-            color: white;
-            cursor: pointer;
-        }
-
-        .filters button:hover {
-            background: #112d4e;
-        }
-
-        .tools-container {
-            width: 90%;
-            margin: auto;
-        }
-
-        .tool {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .tool a {
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            color: #0a192f;
-        }
-
-        .tool p {
-            margin-top: 5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #0a192f;
-            color: white;
-            margin-top: 30px;
-        }
+        body { font-family: Arial, sans-serif; margin:0; background: #f4f6f9; }
+        header { background: #0a192f; color:white; padding:20px; text-align:center; }
+        .profile { text-align:center; margin:20px; }
+        .profile h2 { margin-bottom:5px; color:#0a192f; }
+        .search-box { text-align:center; margin:20px; }
+        .search-box input { width:60%; padding:10px; font-size:16px; border-radius:5px; border:1px solid #ccc; }
+        .filters { text-align:center; margin-bottom:20px; }
+        .filters button { padding:8px 15px; margin:5px; border:none; border-radius:5px; background:#0a192f; color:white; cursor:pointer; }
+        .filters button:hover { background:#112d4e; }
+        .tools-container { width:90%; margin:auto; }
+        .tool { background:white; padding:15px; margin:10px 0; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+        .tool:hover { transform: scale(1.02); transition:0.3s; }
+        .tool a { text-decoration:none; font-size:18px; font-weight:bold; color:#0a192f; }
+        .tool p { margin-top:5px; }
+        footer { text-align:center; padding:15px; background:#0a192f; color:white; margin-top:30px; }
     </style>
 </head>
 
@@ -109,12 +35,10 @@
     <p><strong>University:</strong> Superior University, Rahim Yar Khan</p>
 </div>
 
-<!-- SEARCH -->
 <div class="search-box">
     <input type="text" id="searchInput" placeholder="Search AI Tools..." onkeyup="searchTools()">
 </div>
 
-<!-- FILTER BUTTONS -->
 <div class="filters">
     <button onclick="filterCategory('all')">All</button>
     <button onclick="filterCategory('text')">Text</button>
@@ -128,47 +52,130 @@
     <!-- TEXT TOOLS -->
     <div class="tool text">
         <a href="https://chat.openai.com" target="_blank">ChatGPT</a>
-        <p>AI chatbot for writing, coding and problem solving.</p>
+        <p>AI chatbot for writing, coding, and problem solving.</p>
     </div>
-
     <div class="tool text">
         <a href="https://www.grammarly.com" target="_blank">Grammarly</a>
-        <p>Improves grammar and writing clarity.</p>
+        <p>Improves grammar, tone, and clarity in writing.</p>
+    </div>
+    <div class="tool text">
+        <a href="https://quillbot.com" target="_blank">QuillBot</a>
+        <p>Paraphrasing and summarizing tool for text.</p>
+    </div>
+    <div class="tool text">
+        <a href="https://copy.ai" target="_blank">Copy.ai</a>
+        <p>AI marketing and content generation platform.</p>
+    </div>
+    <div class="tool text">
+        <a href="https://www.jasper.ai" target="_blank">Jasper AI</a>
+        <p>AI blog and ad copy writing assistant.</p>
+    </div>
+    <div class="tool text">
+        <a href="https://www.scribbr.com" target="_blank">Scribbr AI</a>
+        <p>AI-powered proofreading and plagiarism checker.</p>
+    </div>
+    <div class="tool text">
+        <a href="https://writesonic.com" target="_blank">Writesonic</a>
+        <p>AI content generator for blogs, ads, and social media.</p>
+    </div>
+    <div class="tool text">
+        <a href="https://simplified.com" target="_blank">Simplified AI</a>
+        <p>AI writing and design tool for teams.</p>
     </div>
 
     <!-- IMAGE TOOLS -->
     <div class="tool image">
         <a href="https://openai.com/dall-e" target="_blank">DALL·E</a>
-        <p>Generate images using text prompts.</p>
+        <p>Generate images from text prompts.</p>
     </div>
-
     <div class="tool image">
         <a href="https://www.midjourney.com" target="_blank">Midjourney</a>
         <p>High-quality AI art generator.</p>
+    </div>
+    <div class="tool image">
+        <a href="https://www.canva.com" target="_blank">Canva AI</a>
+        <p>AI-powered graphic design tool.</p>
+    </div>
+    <div class="tool image">
+        <a href="https://www.leonardo.ai" target="_blank">Leonardo AI</a>
+        <p>AI art generation platform for designers.</p>
+    </div>
+    <div class="tool image">
+        <a href="https://www.remove.bg" target="_blank">Remove.bg</a>
+        <p>Automatically remove background from images.</p>
+    </div>
+    <div class="tool image">
+        <a href="https://runwayml.com" target="_blank">Runway ML</a>
+        <p>AI video and image editing platform.</p>
+    </div>
+    <div class="tool image">
+        <a href="https://deepai.org" target="_blank">DeepAI</a>
+        <p>Multiple AI image and art generation tools.</p>
+    </div>
+    <div class="tool image">
+        <a href="https://paintschainer.preferred.tech" target="_blank">PaintsChainer</a>
+        <p>AI auto-coloring for sketches and illustrations.</p>
     </div>
 
     <!-- CODING TOOLS -->
     <div class="tool coding">
         <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>
-        <p>AI-powered coding assistant.</p>
+        <p>AI coding assistant integrated in IDEs.</p>
     </div>
-
     <div class="tool coding">
         <a href="https://codeium.com" target="_blank">Codeium</a>
         <p>Free AI code completion tool.</p>
+    </div>
+    <div class="tool coding">
+        <a href="https://www.tabnine.com" target="_blank">Tabnine</a>
+        <p>Smart AI code suggestions for developers.</p>
+    </div>
+    <div class="tool coding">
+        <a href="https://replit.com" target="_blank">Replit AI</a>
+        <p>Online AI coding assistant for collaboration.</p>
+    </div>
+    <div class="tool coding">
+        <a href="https://www.blackbox.com" target="_blank">Blackbox AI</a>
+        <p>Search and generate code snippets instantly.</p>
+    </div>
+    <div class="tool coding">
+        <a href="https://codex.openai.com" target="_blank">OpenAI Codex</a>
+        <p>AI that translates natural language to code.</p>
+    </div>
+    <div class="tool coding">
+        <a href="https://www.sourcery.ai" target="_blank">Sourcery AI</a>
+        <p>AI code refactoring for Python developers.</p>
     </div>
 
     <!-- PRODUCTIVITY TOOLS -->
     <div class="tool productivity">
         <a href="https://www.notion.so/product/ai" target="_blank">Notion AI</a>
-        <p>AI assistant for note-taking.</p>
+        <p>AI assistant for smart note-taking.</p>
     </div>
-
     <div class="tool productivity">
         <a href="https://otter.ai" target="_blank">Otter AI</a>
         <p>Speech-to-text meeting assistant.</p>
     </div>
-
+    <div class="tool productivity">
+        <a href="https://tome.app" target="_blank">Tome AI</a>
+        <p>AI-powered presentation creator.</p>
+    </div>
+    <div class="tool productivity">
+        <a href="https://fireflies.ai" target="_blank">Fireflies AI</a>
+        <p>Automatically records and summarizes meetings.</p>
+    </div>
+    <div class="tool productivity">
+        <a href="https://www.motion.ai" target="_blank">Motion AI</a>
+        <p>AI scheduling and productivity management tool.</p>
+    </div>
+    <div class="tool productivity">
+        <a href="https://superhuman.com" target="_blank">Superhuman AI</a>
+        <p>AI-enhanced email productivity tool.</p>
+    </div>
+    <div class="tool productivity">
+        <a href="https://www.clara.com" target="_blank">Clara AI</a>
+        <p>AI virtual assistant for scheduling and meetings.</p>
+    </div>
 </div>
 
 <footer>
@@ -179,28 +186,17 @@
 function searchTools() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let tools = document.getElementsByClassName("tool");
-
     for (let i = 0; i < tools.length; i++) {
         let text = tools[i].innerText.toLowerCase();
-        if (text.includes(input)) {
-            tools[i].style.display = "block";
-        } else {
-            tools[i].style.display = "none";
-        }
+        tools[i].style.display = text.includes(input) ? "block" : "none";
     }
 }
 
 function filterCategory(category) {
     let tools = document.getElementsByClassName("tool");
-
     for (let i = 0; i < tools.length; i++) {
-        if (category === "all") {
-            tools[i].style.display = "block";
-        } else if (tools[i].classList.contains(category)) {
-            tools[i].style.display = "block";
-        } else {
-            tools[i].style.display = "none";
-        }
+        if (category === "all") tools[i].style.display = "block";
+        else tools[i].style.display = tools[i].classList.contains(category) ? "block" : "none";
     }
 }
 </script>
